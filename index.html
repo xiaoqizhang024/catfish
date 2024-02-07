@@ -3,37 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Your Simple Website</title>
+    <title>Google Model Viewer Example</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
-<body>
+<body style="margin: 0; overflow: hidden;">
 
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        <h2>About Us</h2>
-        <p>This is a simple website to showcase basic HTML and CSS.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Simple Website</p>
-    </footer>
+<model-viewer
+    src="cat_in_a_fish_form_.glb"
+    alt="A 3D model"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-scale="auto"
+></model-viewer>
 
 </body>
-<!-- Import the component -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
-<!-- Use it like any other HTML element -->
-<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="cat_in_a_fish_form_.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
 </html>
 
